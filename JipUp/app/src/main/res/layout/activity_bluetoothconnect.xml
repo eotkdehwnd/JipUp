@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:layout_marginRight="35dp"
+    android:layout_marginLeft="35dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="블루투스 연결상태 확인"
+        android:textStyle="bold"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:padding="15dp">
+        <ProgressBar
+            android:id="@+id/pbPhoneAndCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            style="?android:attr/progressBarStyleLarge"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스마트폰 ↔ RC카"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp">
+        <ProgressBar
+            android:id="@+id/pbCarAndMindWave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            style="?android:attr/progressBarStyleLarge"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RC카 ↔ 마인드웨이브"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bluetooth_btnEditPwComplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="확인"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/blue_button"/>
+
+    <Button
+        android:id="@+id/bluetooth_btnEditPwCancle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="취소"
+        android:textSize="18dp"
+        android:background="@drawable/gray_button"/>
+
+</LinearLayout>

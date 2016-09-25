@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cookandroid.timer.MainActivity"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:layout_marginRight="35dp"
+    android:layout_marginLeft="35dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="주행 시간 설정"
+        android:textStyle="bold"
+        android:textSize="25dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="최소 30초/ 최대 1분 30초 설정 가능"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/timer_layTimerSet"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+        <NumberPicker
+            android:id="@+id/timer_npMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="분 "
+            android:layout_gravity="center_vertical" />
+        <NumberPicker
+            android:id="@+id/timer_npSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="초"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timer_layTimerCountdown"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:visibility="gone"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/timer_txtTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/timer_btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="시작"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/blue_button"/>
+
+        <Button
+            android:id="@+id/timer_btnEnd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:text="취소"
+            android:textSize="15dp"
+            android:textColor="#ff0000"
+            android:background="@drawable/gray_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

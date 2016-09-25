@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jipup.www">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.jipup.www.main.Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jipup.www.user.LoginActivity"
+            android:label="LoginActivity" />
+        <activity
+            android:name="com.jipup.www.main.MainActivity"
+            android:label="MainActivity" />
+        <activity
+            android:name="com.jipup.www.user.EditPwActivity"
+            android:label="EditPwActivity" />
+        <activity
+            android:name="com.jipup.www.drive.GraphActivity"
+            android:label="GraphActivity" />
+        <activity
+            android:name="com.jipup.www.user.JoinActivity"
+            android:label="JoinActivity" />
+        <activity
+            android:name="com.jipup.www.user.MyinfoEditActivity"
+            android:label="MyinfoEditActivity" />
+        <activity
+            android:name="com.jipup.www.drive.TimerActivity"
+            android:label="TimerActivity" />
+        <activity
+            android:name="com.jipup.www.drive.DrivingListActivity"
+            android:label="DrivingListActivity" />
+        <activity
+            android:name="com.jipup.www.drive.DrivingDetailsActivity"
+            android:label="DrivingDetailsActivity" />
+        <activity
+            android:name="com.jipup.www.user.FindPwActivity"
+            android:label="FindPwActivity" />
+        <activity
+            android:name="com.jipup.www.user.ReisEditPwActivity"
+            android:label="ReisEditPwActivity" />
+        <activity
+            android:name="com.jipup.www.user.TempPwActivity"
+            android:label="TempPwActivity" />
+
+    </application>
+
+</manifest>

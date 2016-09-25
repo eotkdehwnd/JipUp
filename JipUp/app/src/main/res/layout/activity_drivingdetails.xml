@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp">
+
+    <!-- 상단 정보-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="4">
+            <TextView
+                android:id="@+id/drivingdetails_txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0000. 00. 00. 00:00"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="주행 상세내역"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/graph_btnGomain"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@drawable/gomain"
+            android:background="@drawable/blue_button"/>
+    </LinearLayout>
+
+    <!-- 그래프, 평균 집중도, 최고 집중도 및 메인으로 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/graph_chart"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="평균 집중도"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/border_table"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="최고 집중도"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/border_table"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/graph_txtAvgmeditation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textSize="15dp"
+                    android:background="@drawable/border_tablebody"/>
+
+                <TextView
+                    android:id="@+id/graph_txtMaxmeditation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textSize="15dp"
+                    android:background="@drawable/border_tablebody"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <!-- 세부내역 버튼-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/graph_ibtnDetail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="세부내역 보기"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 세부내역 집중도 테이블-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/graph_tableDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone">
+
+                <TableRow>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="초"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/border_table" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="집중도"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/border_table" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

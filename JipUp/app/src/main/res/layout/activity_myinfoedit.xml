@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:layout_marginRight="35dp"
+    android:layout_marginLeft="35dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="내 정보 수정"
+        android:textStyle="bold"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <com.example.mcjun.mkjar.QuadcoreView
+                android:id="@+id/myinfoedit_imgEditPhoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <Button
+                android:id="@+id/myinfoedit_btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="사진 촬영"
+                android:textColor="@android:color/white"
+                android:background="@drawable/blue_button"/>
+            <Button
+                android:id="@+id/myinfoedit_btnGallery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="사진 앨범"
+                android:textColor="@android:color/white"
+                android:background="@drawable/blue_button"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/myinfoedit_edtEditName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:hint="이름"
+        android:background="@drawable/edit_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/myinfoedit_edtEditPw"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="비밀번호"
+            android:enabled="false"
+            android:layout_weight="3"
+            android:background="@drawable/edit_text"/>
+
+        <Button
+            android:id="@+id/myinfoedit_btnPwChange"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="수정"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/blue_button"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/myinfoedit_btnMyinfoEditComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="수정완료"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:background="@drawable/blue_button"/>
+
+    <Button
+        android:id="@+id/myinfoedit_btnMyinfoEditCancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:textSize="18dp"
+        android:background="@drawable/gray_button"/>
+</LinearLayout>

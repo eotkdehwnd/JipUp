@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:layout_marginRight="35dp"
+    android:layout_marginLeft="35dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="회원가입"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/join_edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@drawable/edit_text"/>
+
+        <EditText
+            android:id="@+id/join_edtName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="이름"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@drawable/edit_text"/>
+
+        <EditText
+            android:id="@+id/join_edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@drawable/edit_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/join_edtPasswordCheck"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="비밀번호 확인"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text" />
+
+            <Button
+                android:id="@+id/join_btnPasswordCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="확인"
+                android:textColor="@android:color/white"
+                android:background="@drawable/blue_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/join_txtPasswordCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="8dp"
+                android:text="비밀번호 확인을 해주세요" />
+
+            <CheckBox
+                android:id="@+id/join_checkboxPasswordCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/join_btnOK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="회원가입"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/blue_button"/>
+
+        <Button
+            android:id="@+id/join_btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:textSize="18dp"
+            android:background="@drawable/gray_button"/>
+
+    </LinearLayout>
+</LinearLayout>
